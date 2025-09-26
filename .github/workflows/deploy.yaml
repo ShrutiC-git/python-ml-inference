@@ -15,8 +15,7 @@ jobs:
       APP_PORT : ${{ vars.APP_PORT }}
       DOCKER_IMAGE:  ${{ vars.DOCKER_IMAGE }}
       GITOPS_REPO: ${{ vars.GITOPS_REPO }}
-
-    
+  
     steps: 
     - name: Checkout source code
       uses: actions/checkout@v4
