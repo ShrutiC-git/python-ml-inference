@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Query
 import joblib, os
+from minio import Minio
 
 app = FastAPI()
 
