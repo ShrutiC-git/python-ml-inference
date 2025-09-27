@@ -10,7 +10,7 @@ model = None
 if os.path.exists(MODEL_PATH):
     model = joblib.load(MODEL_PATH)
 else: 
-    print("No model found yet. Run fraud-trainer svc to generate a model.")
+    print("No model found yet. Run fraud-trainer svc to generate a model...")
 
 @app.get("/predict")
 def predict(amount: float = Query(..., description="Transaction amount")):
