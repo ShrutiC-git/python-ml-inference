@@ -29,7 +29,7 @@ model = joblib.load("/tmp/model.pkl")
 def predict(amount: float = Query(..., description="Transaction amount")):
     global model
     if model is None:
-        return {"error": "Model is not available! Please train the model first, and then try again."}
+        return {"error": "Model is not available! Please train the model first."}
 
     prediction = model.predict([[amount]])[0]
     return {
